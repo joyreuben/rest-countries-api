@@ -1,13 +1,158 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+img{
+  max-width: 100%;
 }
+
+h1{
+  font-size: 20px;
+}
+
+.mode{
+   cursor: pointer;
+   font-size: 12px;
+}
+
+body{
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/*Header*/
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 15px;
+}
+
+/*filter*/
+.filter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.filter .form-control{
+  width: 100%;
+}
+
+.filter .form-control input{
+  outline: none;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  width: 100%;
+  margin: 0 0 30px;
+}
+
+.filter .region-filter{
+  width: 100%;
+}
+
+.filter .region-filter .select{
+  padding: 12px;
+  border: none;
+  width: 200px;
+  border-radius: 5px;
+}
+/*grid*/
+.gridblock{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding: 20px;
+}
+
+.gridblock article img{
+  border-radius: 5px 5px 0 0;
+ 
+}
+
+.gridblock .details{
+  padding: 40px 20px;
+  margin-top: -20px;
+  border-radius: 0 0 5px 5px;
+}
+
+.gridblock .details h3{
+  padding-bottom: 10px;
+}
+
+.gridblock .details h4{
+  padding-bottom: 5px;
+}
+
+.gridblock .details h4 span{
+  font-weight: 300;
+}
+
+.btn{
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+@media (min-width: 640px) {
+  .gridblock{
+    padding: 0px 50px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .filter{
+    padding: 20px 50px;
+  }
+  .header{
+    padding: 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  .gridblock {
+    padding: 0px 70px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .filter{
+    flex-direction: row;
+    padding: 40px 70px;
+  }
+  .filter .form-control input{
+    padding: 15px;
+    width: 400px;
+    margin: 0 ;
+  }
+  .filter .region-filter{
+    width: auto;
+  }  
+  .mode{
+    font-size: 20px;
+  }
+  h1{
+    font-size: 30px;
+  }
+  .header{
+    padding: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+
+@media (min-width: 990px) {
+  .gridblock {
+    padding: 0px 50px; 
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .filter{
+    padding: 50px 50px; ;
+  }
+}
+
