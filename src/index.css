@@ -80,6 +80,10 @@ body{
  
 }
 
+.gridblock .sec{
+  box-shadow: 0 1px 1px hsla(200, 15%, 8%, 0.9)
+}
+
 .gridblock .details{
   padding: 40px 20px;
   margin-top: -20px;
@@ -101,6 +105,11 @@ body{
 .btn{
   cursor: pointer;
   transition: background-color 0.2s;
+  box-shadow: 0 2px 2px hsla(200, 15%, 8%, 0.9)
+}
+
+.flex ul li{
+  box-shadow: 0 2px 2px hsla(200, 15%, 8%, 0.9)
 }
 
 @media (min-width: 640px) {

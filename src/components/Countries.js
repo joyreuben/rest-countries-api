@@ -27,7 +27,7 @@ const Countries = () => {
 
             return <article key={numericCode}>
               <Link to={`/countries/${name}`} className="btn" >  
-                <div>
+                <div className='sec'>
                   <img src={flag} alt={name}/>
                   <div className='details'
                   sx={{color: "color", backgroundColor: "headerBackground"}}>

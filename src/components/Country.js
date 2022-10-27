@@ -18,8 +18,8 @@ function Country() {
   }, [name])
 
   return (
-    
-    <div className='py-16 px-16' sx={{color: "color"}}>
+
+    <div className='py-16 px-8 md:px-16' sx={{color: "color"}}>
       <Link to="/" className='btn'>
         <i className='fas fa-arrow-left'></i>       Back Home
       </Link>
@@ -27,10 +27,10 @@ function Country() {
       <section>
         {country.map((c) =>  {
 
-            return <article className='mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 
+            return <article className='mt-12 grid grid-cols-1 gap-2 md:grid-cols-3 
             md:place-items-center' key={c.numericCode}>
                         <div className=''>
-                         <img className="h-60 md:w-80" src={c.flag} alt={name}/>
+                         <img className="md:h-60 md:w-80" src={c.flag} alt={name}/>
                         </div>
                         <div className="">
                           <div>
@@ -53,11 +53,11 @@ function Country() {
                               <h5 className='' >
                                Border Countries: 
                                </h5>
-                              <div className='flex'>
+                              <div className='flex flex-wrap'>
                                 {c.borders.map((border) => (
                                   <ul key={border} >
-                                    <li className="flex p-2 rounded text-xs tracking-wide shadow dark list-none"
-                                     >
+                                    <li className="flex p-2 mr-2 rounded text-xs tracking-wide shadow dark list-none"
+                                     sx={{backgroundColor: "headerBackground"}}>
                                         {border} 
                                      </li>   
                                   </ul>
