@@ -1,4 +1,4 @@
-joy-rest-countries-api.netlify.app
+Live preview: joy-rest-countries-api.netlify.app
 
 # Frontend Mentor - REST Countries API with color theme switcher
 
